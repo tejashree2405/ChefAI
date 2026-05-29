@@ -19,9 +19,9 @@ export function Navbar() {
           <Link href="/recipe" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
             Recipes
           </Link>
-          <span className="text-muted-foreground/50 text-sm cursor-not-allowed">
-            Saved
-          </span>
+            <Link href="/saved" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+              Saved
+            </Link>
         </div>
 
         <div className="flex items-center gap-3">

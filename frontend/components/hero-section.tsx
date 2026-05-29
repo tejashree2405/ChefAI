@@ -12,13 +12,11 @@ export function HeroSection() {
     const [loading, setLoading] = useState(false)
 
 const handleGenerate = async () => {
-
   if (!ingredients.trim()) return
 
   setLoading(true)
 
   try {
-
     const ingredientsArray = ingredients
       .split(",")
       .map(item => item.trim())
@@ -27,11 +25,9 @@ const handleGenerate = async () => {
       "http://127.0.0.1:8000/generate-recipe",
       {
         method: "POST",
-
         headers: {
           "Content-Type": "application/json",
         },
-
         body: JSON.stringify({
           ingredients: ingredientsArray,
         }),
@@ -40,23 +36,20 @@ const handleGenerate = async () => {
 
     const data = await response.json()
 
-    console.log(data)
-
     localStorage.setItem(
       "recipe",
-      JSON.stringify(data)
+      JSON.stringify(data.recipe)
     )
 
-    router.push('/recipe')
+    router.push(`/recipe/${data.recipe_id}`)
 
   } catch (error) {
-
-    console.log(error)
-
+    console.error(error)
+  } finally {
+    setLoading(false)
   }
-
-  setLoading(false)
 }
+
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
@@ -110,11 +103,11 @@ const handleGenerate = async () => {
                   <Utensils className="w-4 h-4" />
                   <span className="hidden sm:inline">Press Enter to generate</span>
                 </div>
-                <Button 
-                  onClick={handleGenerate}
-                  className="gradient-primary hover:opacity-90 transition-opacity glow-primary-sm"
-                  size="lg"
-                >
+                <Button
+                    onClick={handleGenerate}
+                    className="gradient-primary hover:opacity-90 transition-opacity glow-primary-sm"
+                    size="lg"
+                  >
                   <Sparkles className="w-4 h-4 mr-2" />
                   {loading ? "Generating..." : "Generate Recipe"}
                   <ArrowRight className="w-4 h-4 ml-2" />

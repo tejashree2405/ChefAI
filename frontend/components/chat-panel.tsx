@@ -12,9 +12,11 @@ import { cn } from '@/lib/utils'
 interface ChatMessage {
   role: 'user' | 'assistant'
   content: string
+  created_at?: string
 }
 
 interface ChatPanelProps {
+  recipeId: number
   recipe: any
   setRecipe: any
   messages: ChatMessage[]
@@ -22,21 +24,22 @@ interface ChatPanelProps {
 }
 
 const placeholders = [
-  'Customize your recipe with AI...',
-  'Make it vegan, spicy, healthier...',
-  'Turn this into a high-protein meal...',
-  'Reduce calories or increase protein...',
-  'Make this recipe gluten-free...',
-  'Add more spice and flavor...',
-  'Convert this into an Italian-style dish...',
+  'Customize your recipe with AI',
+  'Make it vegan, spicy, healthier',
+  'Turn this into a high-protein meal',
+  'Reduce calories or increase protein',
+  'Make this recipe gluten-free',
+  'Add more spice and flavor',
+  'Convert this into an Italian-style dish',
   'Need ingredient substitutions?',
-  'Make this creamy, cheesy, or extra crispy...',
-  'Turn this into a quick 15-minute meal...',
-  'Add more vegetables to this recipe...',
-  'Make this restaurant-quality...',
+  'Make this creamy, cheesy, or extra crispy',
+  'Turn this into a quick 15-minute meal',
+  'Add more vegetables to this recipe',
+  'Make this restaurant-quality',
 ]
 
 export function ChatPanel({
+  recipeId,
   recipe,
   setRecipe,
   messages,
@@ -74,7 +77,8 @@ export function ChatPanel({
 
     const userMessage: ChatMessage = {
       role: 'user',
-      content: input
+      content: input,
+      created_at: new Date().toISOString()
     }
 
     setMessages((prev: ChatMessage[]) => [
@@ -103,6 +107,7 @@ export function ChatPanel({
           },
 
           body: JSON.stringify({
+            recipe_id: recipeId, 
             recipe: recipe,
             modification: currentInput,
           }),
@@ -120,7 +125,8 @@ export function ChatPanel({
 
       const assistantMessage: ChatMessage = {
         role: 'assistant',
-        content: data.assistant_message
+        content: data.assistant_message,
+        created_at: new Date().toISOString()
       }
 
       setMessages((prev: ChatMessage[]) => [
@@ -149,7 +155,7 @@ export function ChatPanel({
 
   return (
 
-    <div className="flex flex-col h-full bg-card/50">
+    <div className="flex flex-col h-full min-h-0 overflow-hidden bg-card/50">
 
       {/* Header */}
 
@@ -185,11 +191,11 @@ export function ChatPanel({
 
       {/* Messages */}
 
-      <ScrollArea className="flex-1 p-4">
+      <ScrollArea className="flex-1 min-h-0 p-4">
 
         <div
           ref={scrollRef}
-          className="space-y-4"
+          className="space-y-4 pb-6"
         >
 
           {messages.map((message, index) => (
@@ -339,10 +345,24 @@ function MessageBubble({
             !isUser && 'text-foreground'
           )}
         >
-
           {message.content}
-
         </p>
+
+        {message.created_at && (
+          <p
+            className={cn(
+              "text-[10px] mt-1",
+              isUser
+                ? "text-white/80"
+                : "text-zinc-500"
+            )}
+          >
+            {new Date(message.created_at).toLocaleTimeString([], {
+              hour: "numeric",
+              minute: "2-digit",
+            })}
+          </p>
+        )}
 
       </div>
 

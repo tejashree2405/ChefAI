@@ -1,20 +1,40 @@
 import os
+import json
+import ast
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from groq import Groq
 from fastapi.middleware.cors import CORSMiddleware
-import json
-import ast
+from datetime import datetime
 
+from database import SessionLocal
+from database import engine
+
+from models import Base
+from models import Recipe, ChatMessage
+from models import ChatMessage
+
+# Load environment variables
 load_dotenv()
 
+
+# Create database tables
+Base.metadata.create_all(bind=engine)
+
+
+# Initialize Groq client
 client = Groq(
     api_key=os.getenv("GROQ_API_KEY")
 )
 
+
+# Create FastAPI app
 app = FastAPI()
 
+
+# Enable CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -23,16 +43,48 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-def home():
-    return {"message": "AI Chef Backend Running"}
+
+# Database session helper
+def get_db():
+
+    db = SessionLocal()
+
+    try:
+        yield db
+
+    finally:
+        db.close()
+
+
+# =========================
+# REQUEST MODELS
+# =========================
 
 class IngredientsInput(BaseModel):
     ingredients: list[str]
 
+
 class ModifyRecipeInput(BaseModel):
+    recipe_id: int
     recipe: dict
     modification: str
+
+
+# =========================
+# HOME ROUTE
+# =========================
+
+@app.get("/")
+def home():
+
+    return {
+        "message": "AI Chef Backend Running"
+    }
+
+
+# =========================
+# GENERATE RECIPE
+# =========================
 
 @app.post("/generate-recipe")
 def generate_recipe(data: IngredientsInput):
@@ -41,11 +93,12 @@ def generate_recipe(data: IngredientsInput):
 
     prompt = f"""
     Generate ONE recipe using these ingredients:
+
     {ingredients_text}
 
     Return ONLY valid JSON.
 
-    Use this exact structure:
+    Use this EXACT structure:
 
     {{
       "title": "",
@@ -55,12 +108,17 @@ def generate_recipe(data: IngredientsInput):
       "servings": 0,
       "difficulty": "",
       "ingredients": [],
-      "instructions": []
+      "instructions": [],
+      "tags": []
     }}
 
-    Do not include markdown.
-    Do not include ```json.
-    Return raw JSON only.
+    RULES:
+    - tags must always be an array of strings
+    - ingredients must always be array of strings
+    - instructions must always be array of strings
+    - Return RAW JSON only
+    - No markdown
+    - No ```json
     """
 
     completion = client.chat.completions.create(
@@ -99,7 +157,36 @@ def generate_recipe(data: IngredientsInput):
                 "raw_response": cleaned_response
             }
 
-    return recipe_json
+    # Save to database
+    db = SessionLocal()
+
+    db_recipe = Recipe(
+
+        title=recipe_json["title"],
+
+        description=recipe_json["description"],
+
+        recipe_data=recipe_json
+
+    )
+
+    db.add(db_recipe)
+
+    db.commit()
+
+    db.refresh(db_recipe)
+
+    db.close()
+
+    return {
+        "recipe_id": db_recipe.id,
+        "recipe": recipe_json
+    }
+
+
+# =========================
+# MODIFY RECIPE
+# =========================
 
 @app.post("/modify-recipe")
 def modify_recipe(data: ModifyRecipeInput):
@@ -152,7 +239,9 @@ def modify_recipe(data: ModifyRecipeInput):
     """
 
     completion = client.chat.completions.create(
+
         model="llama-3.3-70b-versatile",
+
         messages=[
             {
                 "role": "user",
@@ -187,4 +276,175 @@ def modify_recipe(data: ModifyRecipeInput):
                 "raw_response": cleaned_response
             }
 
+    # Save updated recipe to database
+   # Update existing recipe instead of creating a new one
+    db = SessionLocal()
+
+    existing_recipe = (
+        db.query(Recipe)
+        .filter(Recipe.id == data.recipe_id)
+        .first()
+    )
+
+    if not existing_recipe:
+        db.close()
+        return {"error": "Recipe not found"}
+
+    existing_recipe.title = response_json["recipe"]["title"]
+
+    existing_recipe.description = response_json["recipe"]["description"]
+
+    existing_recipe.recipe_data = response_json["recipe"]
+    existing_recipe.updated_at = datetime.utcnow()
+
+    db.commit()
+
+    db.refresh(existing_recipe)
+
+    user_chat = ChatMessage(
+
+        role="user",
+
+        content=data.modification,
+
+        recipe_id=existing_recipe.id
+
+    )
+
+    assistant_chat = ChatMessage(
+
+        role="assistant",
+
+        content=response_json["assistant_message"],
+
+        recipe_id=existing_recipe.id
+
+    )
+
+    db.add(user_chat)
+
+    db.add(assistant_chat)
+
+    db.commit()
+
+    db.close()
+
     return response_json
+
+@app.get("/recipes")
+def get_recipes():
+
+    db = SessionLocal()
+
+    recipes = (
+        db.query(Recipe)
+        .order_by(Recipe.updated_at.desc())
+        .all()
+    )
+
+    db.close()
+
+    return recipes
+
+@app.get("/recipes/{recipe_id}")
+def get_recipe(recipe_id: int):
+
+    db = SessionLocal()
+
+    recipe = db.query(Recipe).filter(
+        Recipe.id == recipe_id
+    ).first()
+
+    db.close()
+
+    if not recipe:
+
+        return {
+            "error": "Recipe not found"
+        }
+
+    return recipe
+
+@app.get("/recipes/{recipe_id}/messages")
+def get_messages(recipe_id: int):
+
+    db = SessionLocal()
+
+    messages = db.query(ChatMessage).filter(
+        ChatMessage.recipe_id == recipe_id
+    ).all()
+
+    db.close()
+
+    return messages
+
+@app.get("/recipe/{recipe_id}")
+def get_recipe(recipe_id: int):
+
+    db = SessionLocal()
+
+    recipe = db.query(Recipe).filter(
+        Recipe.id == recipe_id
+    ).first()
+
+    if not recipe:
+
+        db.close()
+
+        return {
+            "error": "Recipe not found"
+        }
+
+    messages = db.query(ChatMessage).filter(
+        ChatMessage.recipe_id == recipe_id
+    ).all()
+
+    formatted_messages = []
+
+    for message in messages:
+
+        formatted_messages.append({
+            "role": message.role,
+            "content": message.content,
+            "created_at": message.created_at.isoformat()
+        })
+
+    db.close()
+
+    return {
+        "recipe": recipe.recipe_data,
+        "messages": formatted_messages
+    }
+
+@app.delete("/recipes/{recipe_id}")
+def delete_recipe(recipe_id: int):
+
+    db = SessionLocal()
+
+    recipe = (
+        db.query(Recipe)
+        .filter(Recipe.id == recipe_id)
+        .first()
+    )
+
+    if not recipe:
+
+        db.close()
+
+        return {
+            "error": "Recipe not found"
+        }
+
+    db.query(ChatMessage).filter(
+        ChatMessage.recipe_id == recipe_id
+    ).delete()
+
+    db.delete(recipe)
+
+    db.commit()
+
+    db.close()
+
+    return {
+        "success": True
+    }
