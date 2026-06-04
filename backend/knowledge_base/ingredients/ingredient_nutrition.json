@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Chicken Breast",
+    "category": "Protein",
+    "vegan": false,
+    "vegetarian": false,
+    "gluten_free": true,
+    "calories_per_100g": 165,
+    "protein_per_100g": 31,
+    "carbs_per_100g": 0,
+    "fat_per_100g": 3.6
+  },
+  {
+    "name": "Tofu",
+    "category": "Protein",
+    "vegan": true,
+    "vegetarian": true,
+    "gluten_free": true,
+    "calories_per_100g": 144,
+    "protein_per_100g": 17,
+    "carbs_per_100g": 3,
+    "fat_per_100g": 8
+  },
+  {
+    "name": "Egg",
+    "category": "Protein",
+    "vegan": false,
+    "vegetarian": true,
+    "gluten_free": true,
+    "calories_per_100g": 155,
+    "protein_per_100g": 13,
+    "carbs_per_100g": 1.1,
+    "fat_per_100g": 11
+  },
+  {
+    "name": "Rice",
+    "category": "Grain",
+    "vegan": true,
+    "vegetarian": true,
+    "gluten_free": true,
+    "calories_per_100g": 130,
+    "protein_per_100g": 2.7,
+    "carbs_per_100g": 28,
+    "fat_per_100g": 0.3
+  },
+  {
+    "name": "Oats",
+    "category": "Grain",
+    "vegan": true,
+    "vegetarian": true,
+    "gluten_free": false,
+    "calories_per_100g": 389,
+    "protein_per_100g": 16.9,
+    "carbs_per_100g": 66,
+    "fat_per_100g": 6.9
+  },
+  {
+    "name": "Broccoli",
+    "category": "Vegetable",
+    "vegan": true,
+    "vegetarian": true,
+    "gluten_free": true,
+    "calories_per_100g": 34,
+    "protein_per_100g": 2.8,
+    "carbs_per_100g": 7,
+    "fat_per_100g": 0.4
+  },
+  {
+    "name": "Banana",
+    "category": "Fruit",
+    "vegan": true,
+    "vegetarian": true,
+    "gluten_free": true,
+    "calories_per_100g": 89,
+    "protein_per_100g": 1.1,
+    "carbs_per_100g": 23,
+    "fat_per_100g": 0.3
+  },
+  {
+    "name": "Almonds",
+    "category": "Nut",
+    "vegan": true,
+    "vegetarian": true,
+    "gluten_free": true,
+    "calories_per_100g": 579,
+    "protein_per_100g": 21,
+    "carbs_per_100g": 22,
+    "fat_per_100g": 50
+  },
+  {
+    "name": "Greek Yogurt",
+    "category": "Dairy",
+    "vegan": false,
+    "vegetarian": true,
+    "gluten_free": true,
+    "calories_per_100g": 59,
+    "protein_per_100g": 10,
+    "carbs_per_100g": 3.6,
+    "fat_per_100g": 0.4
+  },
+  {
+    "name": "Chickpeas",
+    "category": "Legume",
+    "vegan": true,
+    "vegetarian": true,
+    "gluten_free": true,
+    "calories_per_100g": 164,
+    "protein_per_100g": 9,
+    "carbs_per_100g": 27,
+    "fat_per_100g": 2.6
+  }
+]

@@ -1,0 +1,236 @@
+[
+  {
+    "ingredient": "Egg",
+    "substitutes": [
+      {
+        "name": "Flax Egg",
+        "ratio": "1 tbsp flaxseed meal + 3 tbsp water",
+        "best_for": ["Baking"],
+        "vegan": true
+      },
+      {
+        "name": "Chia Egg",
+        "ratio": "1 tbsp chia seeds + 3 tbsp water",
+        "best_for": ["Baking"],
+        "vegan": true
+      },
+      {
+        "name": "Applesauce",
+        "ratio": "1/4 cup per egg",
+        "best_for": ["Cakes", "Muffins"],
+        "vegan": true
+      }
+    ]
+  },
+  {
+    "ingredient": "Butter",
+    "substitutes": [
+      {
+        "name": "Olive Oil",
+        "ratio": "1:1",
+        "best_for": ["Cooking", "Roasting"],
+        "vegan": true
+      },
+      {
+        "name": "Coconut Oil",
+        "ratio": "1:1",
+        "best_for": ["Baking"],
+        "vegan": true
+      },
+      {
+        "name": "Avocado",
+        "ratio": "1:1",
+        "best_for": ["Baking"],
+        "vegan": true
+      }
+    ]
+  },
+  {
+    "ingredient": "Milk",
+    "substitutes": [
+      {
+        "name": "Almond Milk",
+        "ratio": "1:1",
+        "best_for": ["Baking", "Smoothies"],
+        "vegan": true
+      },
+      {
+        "name": "Soy Milk",
+        "ratio": "1:1",
+        "best_for": ["Cooking", "Baking"],
+        "vegan": true
+      },
+      {
+        "name": "Oat Milk",
+        "ratio": "1:1",
+        "best_for": ["Coffee", "Baking"],
+        "vegan": true
+      }
+    ]
+  },
+  {
+    "ingredient": "Heavy Cream",
+    "substitutes": [
+      {
+        "name": "Coconut Cream",
+        "ratio": "1:1",
+        "best_for": ["Curries", "Desserts"],
+        "vegan": true
+      },
+      {
+        "name": "Greek Yogurt",
+        "ratio": "1:1",
+        "best_for": ["Sauces"],
+        "vegan": false
+      }
+    ]
+  },
+  {
+    "ingredient": "Greek Yogurt",
+    "substitutes": [
+      {
+        "name": "Skyr",
+        "ratio": "1:1",
+        "best_for": ["Breakfast", "Snacks"],
+        "vegan": false
+      },
+      {
+        "name": "Coconut Yogurt",
+        "ratio": "1:1",
+        "best_for": ["Vegan Recipes"],
+        "vegan": true
+      }
+    ]
+  },
+  {
+    "ingredient": "Sugar",
+    "substitutes": [
+      {
+        "name": "Honey",
+        "ratio": "3/4 cup per 1 cup sugar",
+        "best_for": ["Baking", "Tea"],
+        "vegan": false
+      },
+      {
+        "name": "Maple Syrup",
+        "ratio": "3/4 cup per 1 cup sugar",
+        "best_for": ["Baking"],
+        "vegan": true
+      },
+      {
+        "name": "Stevia",
+        "ratio": "Varies by brand",
+        "best_for": ["Low-Calorie Recipes"],
+        "vegan": true
+      }
+    ]
+  },
+  {
+    "ingredient": "Honey",
+    "substitutes": [
+      {
+        "name": "Maple Syrup",
+        "ratio": "1:1",
+        "best_for": ["Baking", "Pancakes"],
+        "vegan": true
+      },
+      {
+        "name": "Agave Syrup",
+        "ratio": "1:1",
+        "best_for": ["Desserts"],
+        "vegan": true
+      }
+    ]
+  },
+  {
+    "ingredient": "Chicken Breast",
+    "substitutes": [
+      {
+        "name": "Turkey Breast",
+        "ratio": "1:1",
+        "best_for": ["High Protein Meals"],
+        "vegan": false
+      },
+      {
+        "name": "Tofu",
+        "ratio": "1:1",
+        "best_for": ["Vegan Recipes"],
+        "vegan": true
+      },
+      {
+        "name": "Tempeh",
+        "ratio": "1:1",
+        "best_for": ["Vegan Recipes"],
+        "vegan": true
+      }
+    ]
+  },
+  {
+    "ingredient": "Beef",
+    "substitutes": [
+      {
+        "name": "Lamb",
+        "ratio": "1:1",
+        "best_for": ["Stews"],
+        "vegan": false
+      },
+      {
+        "name": "Mushrooms",
+        "ratio": "1:1",
+        "best_for": ["Vegetarian Recipes"],
+        "vegan": true
+      }
+    ]
+  },
+  {
+    "ingredient": "Rice",
+    "substitutes": [
+      {
+        "name": "Quinoa",
+        "ratio": "1:1",
+        "best_for": ["High Protein Meals"],
+        "vegan": true
+      },
+      {
+        "name": "Cauliflower Rice",
+        "ratio": "1:1",
+        "best_for": ["Keto Recipes"],
+        "vegan": true
+      }
+    ]
+  },
+  {
+    "ingredient": "Breadcrumbs",
+    "substitutes": [
+      {
+        "name": "Crushed Oats",
+        "ratio": "1:1",
+        "best_for": ["Meatballs", "Coating"],
+        "vegan": true
+      },
+      {
+        "name": "Almond Flour",
+        "ratio": "1:1",
+        "best_for": ["Keto Recipes"],
+        "vegan": true
+      }
+    ]
+  },
+  {
+    "ingredient": "Soy Sauce",
+    "substitutes": [
+      {
+        "name": "Tamari",
+        "ratio": "1:1",
+        "best_for": ["Gluten Free Recipes"],
+        "vegan": true
+      },
+      {
+        "name": "Coconut Aminos",
+        "ratio": "1:1",
+        "best_for": ["Paleo Recipes"],
+        "vegan": true
+      }
+    ]
+  }
+]

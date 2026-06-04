@@ -1,0 +1,73 @@
+{
+  "Protein": [
+    "Chicken Breast",
+    "Turkey",
+    "Egg",
+    "Tofu",
+    "Tempeh",
+    "Fish",
+    "Greek Yogurt",
+    "Paneer"
+  ],
+  "Vegetable": [
+    "Broccoli",
+    "Spinach",
+    "Carrot",
+    "Bell Pepper",
+    "Cauliflower",
+    "Cucumber",
+    "Tomato"
+  ],
+  "Fruit": [
+    "Banana",
+    "Apple",
+    "Orange",
+    "Mango",
+    "Strawberry",
+    "Blueberry"
+  ],
+  "Grain": [
+    "Rice",
+    "Oats",
+    "Quinoa",
+    "Barley",
+    "Whole Wheat Bread"
+  ],
+  "Legume": [
+    "Chickpeas",
+    "Lentils",
+    "Black Beans",
+    "Kidney Beans"
+  ],
+  "Nut": [
+    "Almonds",
+    "Walnuts",
+    "Cashews",
+    "Pistachios"
+  ],
+  "Dairy": [
+    "Milk",
+    "Greek Yogurt",
+    "Cheese",
+    "Butter"
+  ],
+  "Oil": [
+    "Olive Oil",
+    "Coconut Oil",
+    "Avocado Oil",
+    "Canola Oil"
+  ],
+  "Herb": [
+    "Basil",
+    "Parsley",
+    "Cilantro",
+    "Mint"
+  ],
+  "Spice": [
+    "Turmeric",
+    "Cumin",
+    "Paprika",
+    "Cinnamon",
+    "Black Pepper"
+  ]
+}
