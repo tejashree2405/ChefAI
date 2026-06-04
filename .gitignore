@@ -13,3 +13,7 @@ node_modules/
 # OS files
 .DS_Store
 Thumbs.db
+
+# ChromaDB
+backend/chroma_db/
+chroma_db/
