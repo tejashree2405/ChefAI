@@ -1,0 +1,50 @@
+[
+  {
+    "ingredient": "Chicken Breast",
+    "fridge_days": 2,
+    "freezer_months": 9,
+    "storage_tip": "Store below 4°C."
+  },
+  {
+    "ingredient": "Tofu",
+    "fridge_days": 5,
+    "freezer_months": 3,
+    "storage_tip": "Keep submerged in water and change daily."
+  },
+  {
+    "ingredient": "Egg",
+    "fridge_days": 21,
+    "freezer_months": 12,
+    "storage_tip": "Store in original carton."
+  },
+  {
+    "ingredient": "Broccoli",
+    "fridge_days": 5,
+    "freezer_months": 12,
+    "storage_tip": "Keep in perforated plastic bag."
+  },
+  {
+    "ingredient": "Banana",
+    "fridge_days": 7,
+    "freezer_months": 3,
+    "storage_tip": "Store at room temperature until ripe."
+  },
+  {
+    "ingredient": "Greek Yogurt",
+    "fridge_days": 10,
+    "freezer_months": 2,
+    "storage_tip": "Keep sealed tightly."
+  },
+  {
+    "ingredient": "Rice",
+    "fridge_days": 365,
+    "freezer_months": 24,
+    "storage_tip": "Store dry in airtight container."
+  },
+  {
+    "ingredient": "Oats",
+    "fridge_days": 365,
+    "freezer_months": 24,
+    "storage_tip": "Store in cool dry place."
+  }
+]

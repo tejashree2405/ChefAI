@@ -1,0 +1,321 @@
+[
+  {
+    "cuisine": "Indian",
+    "flavor_profile": [
+      "Spicy",
+      "Aromatic",
+      "Rich"
+    ],
+    "common_ingredients": [
+      "Onion",
+      "Tomato",
+      "Garlic",
+      "Ginger",
+      "Rice",
+      "Lentils",
+      "Paneer"
+    ],
+    "common_spices": [
+      "Turmeric",
+      "Cumin",
+      "Coriander",
+      "Garam Masala",
+      "Mustard Seeds",
+      "Cardamom"
+    ],
+    "cooking_methods": [
+      "Tadka",
+      "Dum",
+      "Grilling",
+      "Pressure Cooking"
+    ],
+    "signature_dishes": [
+      "Butter Chicken",
+      "Biryani",
+      "Dal Tadka",
+      "Palak Paneer"
+    ]
+  },
+  {
+    "cuisine": "Italian",
+    "flavor_profile": [
+      "Savory",
+      "Herby",
+      "Fresh"
+    ],
+    "common_ingredients": [
+      "Tomato",
+      "Pasta",
+      "Olive Oil",
+      "Garlic",
+      "Parmesan",
+      "Mozzarella"
+    ],
+    "common_spices": [
+      "Basil",
+      "Oregano",
+      "Rosemary",
+      "Thyme"
+    ],
+    "cooking_methods": [
+      "Roasting",
+      "Baking",
+      "Sauteing"
+    ],
+    "signature_dishes": [
+      "Pizza",
+      "Lasagna",
+      "Risotto",
+      "Spaghetti Carbonara"
+    ]
+  },
+  {
+    "cuisine": "Chinese",
+    "flavor_profile": [
+      "Umami",
+      "Savory",
+      "Balanced"
+    ],
+    "common_ingredients": [
+      "Rice",
+      "Soy Sauce",
+      "Ginger",
+      "Garlic",
+      "Green Onion",
+      "Tofu"
+    ],
+    "common_spices": [
+      "Five Spice Powder",
+      "White Pepper",
+      "Sichuan Pepper"
+    ],
+    "cooking_methods": [
+      "Stir Fry",
+      "Steaming",
+      "Braising"
+    ],
+    "signature_dishes": [
+      "Kung Pao Chicken",
+      "Mapo Tofu",
+      "Fried Rice",
+      "Dumplings"
+    ]
+  },
+  {
+    "cuisine": "Japanese",
+    "flavor_profile": [
+      "Umami",
+      "Light",
+      "Clean"
+    ],
+    "common_ingredients": [
+      "Rice",
+      "Soy Sauce",
+      "Miso",
+      "Seaweed",
+      "Fish",
+      "Tofu"
+    ],
+    "common_spices": [
+      "Wasabi",
+      "Shichimi Togarashi"
+    ],
+    "cooking_methods": [
+      "Grilling",
+      "Steaming",
+      "Raw Preparation"
+    ],
+    "signature_dishes": [
+      "Sushi",
+      "Ramen",
+      "Tempura",
+      "Teriyaki Chicken"
+    ]
+  },
+  {
+    "cuisine": "Mexican",
+    "flavor_profile": [
+      "Spicy",
+      "Tangy",
+      "Bold"
+    ],
+    "common_ingredients": [
+      "Corn",
+      "Beans",
+      "Tomato",
+      "Avocado",
+      "Lime",
+      "Chicken"
+    ],
+    "common_spices": [
+      "Chili Powder",
+      "Cumin",
+      "Paprika",
+      "Oregano"
+    ],
+    "cooking_methods": [
+      "Grilling",
+      "Roasting",
+      "Slow Cooking"
+    ],
+    "signature_dishes": [
+      "Tacos",
+      "Burritos",
+      "Enchiladas",
+      "Quesadillas"
+    ]
+  },
+  {
+    "cuisine": "Thai",
+    "flavor_profile": [
+      "Sweet",
+      "Sour",
+      "Spicy",
+      "Salty"
+    ],
+    "common_ingredients": [
+      "Coconut Milk",
+      "Lime",
+      "Fish Sauce",
+      "Rice",
+      "Chili",
+      "Basil"
+    ],
+    "common_spices": [
+      "Galangal",
+      "Lemongrass",
+      "Thai Chili"
+    ],
+    "cooking_methods": [
+      "Stir Fry",
+      "Curry Cooking",
+      "Grilling"
+    ],
+    "signature_dishes": [
+      "Pad Thai",
+      "Green Curry",
+      "Tom Yum Soup"
+    ]
+  },
+  {
+    "cuisine": "Korean",
+    "flavor_profile": [
+      "Spicy",
+      "Fermented",
+      "Savory"
+    ],
+    "common_ingredients": [
+      "Rice",
+      "Kimchi",
+      "Gochujang",
+      "Garlic",
+      "Beef",
+      "Tofu"
+    ],
+    "common_spices": [
+      "Gochugaru",
+      "Sesame"
+    ],
+    "cooking_methods": [
+      "Grilling",
+      "Fermenting",
+      "Stir Frying"
+    ],
+    "signature_dishes": [
+      "Bibimbap",
+      "Bulgogi",
+      "Kimchi Fried Rice"
+    ]
+  },
+  {
+    "cuisine": "Mediterranean",
+    "flavor_profile": [
+      "Fresh",
+      "Herby",
+      "Healthy"
+    ],
+    "common_ingredients": [
+      "Olive Oil",
+      "Chickpeas",
+      "Tomato",
+      "Cucumber",
+      "Feta",
+      "Lemon"
+    ],
+    "common_spices": [
+      "Oregano",
+      "Parsley",
+      "Mint"
+    ],
+    "cooking_methods": [
+      "Grilling",
+      "Roasting"
+    ],
+    "signature_dishes": [
+      "Greek Salad",
+      "Hummus",
+      "Falafel"
+    ]
+  },
+  {
+    "cuisine": "French",
+    "flavor_profile": [
+      "Rich",
+      "Elegant",
+      "Buttery"
+    ],
+    "common_ingredients": [
+      "Butter",
+      "Cream",
+      "Wine",
+      "Mushrooms",
+      "Cheese"
+    ],
+    "common_spices": [
+      "Thyme",
+      "Tarragon",
+      "Parsley"
+    ],
+    "cooking_methods": [
+      "Braising",
+      "Roasting",
+      "Sauteing"
+    ],
+    "signature_dishes": [
+      "Coq au Vin",
+      "Ratatouille",
+      "Beef Bourguignon"
+    ]
+  },
+  {
+    "cuisine": "Middle Eastern",
+    "flavor_profile": [
+      "Aromatic",
+      "Savory",
+      "Warm"
+    ],
+    "common_ingredients": [
+      "Chickpeas",
+      "Lamb",
+      "Tahini",
+      "Yogurt",
+      "Pita Bread"
+    ],
+    "common_spices": [
+      "Cumin",
+      "Sumac",
+      "Za'atar",
+      "Coriander"
+    ],
+    "cooking_methods": [
+      "Grilling",
+      "Roasting"
+    ],
+    "signature_dishes": [
+      "Shawarma",
+      "Falafel",
+      "Hummus",
+      "Kebab"
+    ]
+  }
+]
