@@ -1,0 +1,209 @@
+[
+  {
+    "allergen": "Milk",
+    "aliases": [
+      "Dairy",
+      "Cream",
+      "Butter",
+      "Cheese",
+      "Yogurt",
+      "Whey",
+      "Casein"
+    ],
+    "symptoms": [
+      "Hives",
+      "Stomach Pain",
+      "Vomiting",
+      "Anaphylaxis"
+    ],
+    "avoid_ingredients": [
+      "Milk",
+      "Butter",
+      "Cheese",
+      "Cream",
+      "Yogurt",
+      "Whey Protein",
+      "Casein"
+    ]
+  },
+  {
+    "allergen": "Egg",
+    "aliases": [
+      "Egg White",
+      "Egg Yolk",
+      "Albumin"
+    ],
+    "symptoms": [
+      "Skin Rash",
+      "Digestive Issues",
+      "Anaphylaxis"
+    ],
+    "avoid_ingredients": [
+      "Egg",
+      "Mayonnaise",
+      "Albumin",
+      "Meringue"
+    ]
+  },
+  {
+    "allergen": "Peanut",
+    "aliases": [
+      "Groundnut",
+      "Peanut Butter",
+      "Peanut Oil"
+    ],
+    "symptoms": [
+      "Swelling",
+      "Difficulty Breathing",
+      "Anaphylaxis"
+    ],
+    "avoid_ingredients": [
+      "Peanut",
+      "Peanut Butter",
+      "Peanut Flour",
+      "Peanut Oil"
+    ]
+  },
+  {
+    "allergen": "Tree Nuts",
+    "aliases": [
+      "Almond",
+      "Cashew",
+      "Walnut",
+      "Pistachio",
+      "Hazelnut",
+      "Pecan"
+    ],
+    "symptoms": [
+      "Itching",
+      "Swelling",
+      "Anaphylaxis"
+    ],
+    "avoid_ingredients": [
+      "Almonds",
+      "Cashews",
+      "Walnuts",
+      "Pistachios",
+      "Hazelnuts",
+      "Pecans"
+    ]
+  },
+  {
+    "allergen": "Soy",
+    "aliases": [
+      "Soybean",
+      "Soy Protein",
+      "Soy Lecithin"
+    ],
+    "symptoms": [
+      "Hives",
+      "Digestive Issues",
+      "Breathing Problems"
+    ],
+    "avoid_ingredients": [
+      "Soybeans",
+      "Tofu",
+      "Tempeh",
+      "Soy Milk",
+      "Soy Sauce",
+      "Edamame"
+    ]
+  },
+  {
+    "allergen": "Wheat",
+    "aliases": [
+      "Gluten",
+      "Flour",
+      "Semolina"
+    ],
+    "symptoms": [
+      "Bloating",
+      "Digestive Issues",
+      "Skin Reactions"
+    ],
+    "avoid_ingredients": [
+      "Wheat Flour",
+      "Bread",
+      "Pasta",
+      "Cake",
+      "Cookies"
+    ]
+  },
+  {
+    "allergen": "Fish",
+    "aliases": [
+      "Salmon",
+      "Tuna",
+      "Cod",
+      "Sardine"
+    ],
+    "symptoms": [
+      "Swelling",
+      "Hives",
+      "Anaphylaxis"
+    ],
+    "avoid_ingredients": [
+      "Fish",
+      "Fish Sauce",
+      "Anchovy Paste"
+    ]
+  },
+  {
+    "allergen": "Shellfish",
+    "aliases": [
+      "Shrimp",
+      "Prawn",
+      "Crab",
+      "Lobster",
+      "Clam",
+      "Mussel"
+    ],
+    "symptoms": [
+      "Itching",
+      "Swelling",
+      "Anaphylaxis"
+    ],
+    "avoid_ingredients": [
+      "Shrimp",
+      "Prawn",
+      "Crab",
+      "Lobster",
+      "Clams",
+      "Mussels"
+    ]
+  },
+  {
+    "allergen": "Sesame",
+    "aliases": [
+      "Sesame Seeds",
+      "Tahini",
+      "Sesame Oil"
+    ],
+    "symptoms": [
+      "Hives",
+      "Breathing Problems",
+      "Anaphylaxis"
+    ],
+    "avoid_ingredients": [
+      "Sesame Seeds",
+      "Tahini",
+      "Sesame Oil"
+    ]
+  },
+  {
+    "allergen": "Mustard",
+    "aliases": [
+      "Mustard Seed",
+      "Mustard Powder"
+    ],
+    "symptoms": [
+      "Skin Reactions",
+      "Digestive Problems"
+    ],
+    "avoid_ingredients": [
+      "Mustard",
+      "Mustard Powder",
+      "Mustard Sauce"
+    ]
+  }
+]

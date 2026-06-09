@@ -1,0 +1,266 @@
+[
+  {
+    "diet": "Vegan",
+    "allowed": [
+      "Vegetables",
+      "Fruits",
+      "Legumes",
+      "Nuts",
+      "Seeds",
+      "Tofu",
+      "Tempeh",
+      "Plant Milk",
+      "Whole Grains"
+    ],
+    "avoid": [
+      "Meat",
+      "Chicken",
+      "Fish",
+      "Eggs",
+      "Milk",
+      "Cheese",
+      "Butter",
+      "Yogurt",
+      "Honey"
+    ],
+    "recommended_proteins": [
+      "Tofu",
+      "Tempeh",
+      "Lentils",
+      "Chickpeas",
+      "Black Beans",
+      "Edamame"
+    ]
+  },
+  {
+    "diet": "Vegetarian",
+    "allowed": [
+      "Vegetables",
+      "Fruits",
+      "Legumes",
+      "Eggs",
+      "Milk",
+      "Cheese",
+      "Yogurt",
+      "Whole Grains"
+    ],
+    "avoid": [
+      "Chicken",
+      "Beef",
+      "Pork",
+      "Fish",
+      "Seafood"
+    ],
+    "recommended_proteins": [
+      "Eggs",
+      "Paneer",
+      "Greek Yogurt",
+      "Tofu",
+      "Lentils",
+      "Chickpeas"
+    ]
+  },
+  {
+    "diet": "Keto",
+    "allowed": [
+      "Eggs",
+      "Cheese",
+      "Butter",
+      "Chicken",
+      "Beef",
+      "Fish",
+      "Avocado",
+      "Leafy Greens",
+      "Olive Oil",
+      "Nuts"
+    ],
+    "avoid": [
+      "Rice",
+      "Bread",
+      "Pasta",
+      "Sugar",
+      "Potatoes",
+      "Corn",
+      "Beans",
+      "Most Fruits"
+    ],
+    "recommended_proteins": [
+      "Chicken",
+      "Eggs",
+      "Salmon",
+      "Beef",
+      "Turkey"
+    ]
+  },
+  {
+    "diet": "Paleo",
+    "allowed": [
+      "Meat",
+      "Fish",
+      "Eggs",
+      "Vegetables",
+      "Fruits",
+      "Nuts",
+      "Seeds"
+    ],
+    "avoid": [
+      "Dairy",
+      "Beans",
+      "Lentils",
+      "Rice",
+      "Wheat",
+      "Processed Foods"
+    ],
+    "recommended_proteins": [
+      "Chicken",
+      "Turkey",
+      "Beef",
+      "Salmon",
+      "Eggs"
+    ]
+  },
+  {
+    "diet": "Gluten-Free",
+    "allowed": [
+      "Rice",
+      "Quinoa",
+      "Corn",
+      "Potatoes",
+      "Vegetables",
+      "Fruits",
+      "Meat",
+      "Fish",
+      "Eggs"
+    ],
+    "avoid": [
+      "Wheat",
+      "Barley",
+      "Rye",
+      "Regular Pasta",
+      "Most Breads"
+    ],
+    "recommended_proteins": [
+      "Chicken",
+      "Eggs",
+      "Fish",
+      "Tofu",
+      "Greek Yogurt"
+    ]
+  },
+  {
+    "diet": "Dairy-Free",
+    "allowed": [
+      "Vegetables",
+      "Fruits",
+      "Meat",
+      "Fish",
+      "Eggs",
+      "Plant Milk",
+      "Nuts",
+      "Seeds"
+    ],
+    "avoid": [
+      "Milk",
+      "Cheese",
+      "Butter",
+      "Cream",
+      "Yogurt"
+    ],
+    "recommended_proteins": [
+      "Chicken",
+      "Fish",
+      "Eggs",
+      "Tofu",
+      "Tempeh"
+    ]
+  },
+  {
+    "diet": "High-Protein",
+    "allowed": [
+      "Chicken",
+      "Turkey",
+      "Fish",
+      "Eggs",
+      "Greek Yogurt",
+      "Tofu",
+      "Tempeh",
+      "Lentils",
+      "Protein Powder"
+    ],
+    "avoid": [],
+    "recommended_proteins": [
+      "Chicken Breast",
+      "Turkey",
+      "Egg Whites",
+      "Greek Yogurt",
+      "Tofu",
+      "Whey Protein"
+    ]
+  },
+  {
+    "diet": "Weight Loss",
+    "allowed": [
+      "Lean Protein",
+      "Vegetables",
+      "Fruits",
+      "Whole Grains",
+      "Low Fat Dairy"
+    ],
+    "avoid": [
+      "Sugary Drinks",
+      "Deep Fried Foods",
+      "High Sugar Desserts"
+    ],
+    "recommended_proteins": [
+      "Chicken Breast",
+      "Turkey",
+      "Greek Yogurt",
+      "Egg Whites",
+      "Tofu"
+    ]
+  },
+  {
+    "diet": "Muscle Gain",
+    "allowed": [
+      "Protein Rich Foods",
+      "Complex Carbohydrates",
+      "Healthy Fats",
+      "Dairy",
+      "Lean Meats"
+    ],
+    "avoid": [
+      "Excessive Alcohol"
+    ],
+    "recommended_proteins": [
+      "Chicken Breast",
+      "Lean Beef",
+      "Salmon",
+      "Eggs",
+      "Greek Yogurt",
+      "Whey Protein"
+    ]
+  },
+  {
+    "diet": "Mediterranean",
+    "allowed": [
+      "Olive Oil",
+      "Fish",
+      "Vegetables",
+      "Fruits",
+      "Whole Grains",
+      "Beans",
+      "Nuts"
+    ],
+    "avoid": [
+      "Highly Processed Foods",
+      "Refined Sugar"
+    ],
+    "recommended_proteins": [
+      "Salmon",
+      "Tuna",
+      "Chickpeas",
+      "Lentils",
+      "Greek Yogurt"
+    ]
+  }
+]
