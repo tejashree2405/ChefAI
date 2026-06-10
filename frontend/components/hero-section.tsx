@@ -22,7 +22,7 @@ const handleGenerate = async () => {
       .map(item => item.trim())
 
     const response = await fetch(
-      "http://127.0.0.1:8000/generate-recipe",
+      `${process.env.NEXT_PUBLIC_API_URL}/generate-recipe`,
       {
         method: "POST",
         headers: {
@@ -62,11 +62,6 @@ const handleGenerate = async () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8">
-          <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm text-muted-foreground">AI-Powered Recipe Generation</span>
-        </div>
 
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-balance">

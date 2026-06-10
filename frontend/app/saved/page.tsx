@@ -19,7 +19,7 @@ export default function SavedPage() {
   async function fetchRecipes() {
     try {
       const response = await fetch(
-        'http://127.0.0.1:8000/recipes'
+        `${process.env.NEXT_PUBLIC_API_URL}/recipes`
       )
 
       const data = await response.json()
@@ -51,7 +51,7 @@ export default function SavedPage() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/recipes/${recipeId}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/recipes/${recipeId}`,
         {
           method: 'DELETE',
         }
