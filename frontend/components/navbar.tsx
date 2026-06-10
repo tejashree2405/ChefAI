@@ -16,9 +16,6 @@ export function Navbar() {
           <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
             Home
           </Link>
-          <Link href="/recipe" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-            Recipes
-          </Link>
             <Link href="/saved" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               Saved
             </Link>
