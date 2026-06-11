@@ -142,18 +142,10 @@ ChefAI generates:
 - Difficulty
 - Tags
 
-![Recipe Generation](screenshots/recipe-generation.png)
+![Recipe Generation](screenshots/recipe-generation1.png)
 
 
 ![Recipe Generation](screenshots/recipe-generation2.png)
-
-### Generated Ingredients
-
-![Generated Ingredients](screenshots/ingredients.png)
-
-### Generated Instructions
-
-![Generated Instructions](screenshots/instructions.png)
 
 ---
 
@@ -172,8 +164,6 @@ Make it keto
 ```
 
 The AI updates the recipe while maintaining context from previous modifications.
-
-![Recipe Modification](screenshots/recipe-modification.png)
 
 ![Recipe Modification](screenshots/recipe-modification2.png)
 
@@ -302,7 +292,7 @@ Users can:
 - Track recipe modifications
 - Delete recipes
 
-![Saved Recipes](screenshots/saved-recipes.png)
+![Saved Recipes](screenshots/saved-recipes1.png)
 
 ---
 
